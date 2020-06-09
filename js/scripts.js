@@ -5,11 +5,21 @@ $(document).ready(function(){
 
     let vowels = ["a", "e", "i", "o", "u"];
 
-    vowels.forEach(function(vowel){
-      let newString = sentence.replace(vowel, "-");
-      console.log(newString);
+    // let newVowels = vowels.toString();
+    // console.log(newVowels);
+
+    vowels.forEach(function(){
+      sentence = sentence.replace(/([aeiou])/g, "-");
+      console.log(sentence);
+      $("#result").text(sentence);
+      $("#formOne").fadeOut();
     })
-
-
   })
 })
+
+// function hasVowels(string){
+//   let word = string.toLowerCase()
+//   if(/[aeiouy]/.test(word)){
+//        return true
+//     } else {
+//        return false
